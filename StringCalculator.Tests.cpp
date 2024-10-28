@@ -109,6 +109,32 @@ TEST(when_passed_multicharacter_delimiter, Uses_that_delimiter_to_sum_values) {
   EXPECT_EQ(expectedValue, actualValue);
 }
 
+TEST(when_passed_multiple_delimiters, Sums_on_each_delimiter) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 9;
+
+  //Act
+  int actualValue = objUnderTest.Add("//[*][%]\n4*2%3");
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
+TEST(when_passed_multiple_multicharacter_delimiters, Sums_on_each_delimiter) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 14;
+
+  //Act
+  int actualValue = objUnderTest.Add("//[**][%^]\n4**1%^9");
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
+
+
 
 
 
