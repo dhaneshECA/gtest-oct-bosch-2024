@@ -37,7 +37,7 @@ TEST(when_passed_a_single_number, Returns_1_for_one) {
   EXPECT_EQ(expectedValue, actualValue);
 }
 
-TEST(when_passed_a_single_number, Returns_their_sum) {
+TEST(when_passed_two_comma_delimited_numbers, Returns_their_sum) {
   // Arrange
   StringCalculator objUnderTest;
   int expectedValue = 3;
