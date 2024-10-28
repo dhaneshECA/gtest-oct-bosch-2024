@@ -61,4 +61,54 @@ TEST(when_passed_multiple_comma_delimited_numbers, Returns_their_sum) {
   EXPECT_EQ(expectedValue, actualValue);
 }
 
+TEST(when_delimited_with_newline_and_comma, Returns_their_sum) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 6;
+
+  //Act
+  int actualValue = objUnderTest.Add("1\n2,3");
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
+TEST(when_delimited_with_newline_and_comma, Returns_the_sum_based_on_that_delimiter) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 3;
+
+  //Act
+  int actualValue = objUnderTest.Add("//;\n1;2");
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
+TEST(when_passed_numbers_over_1000, Ignores_them) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 45;
+
+  //Act
+  int actualValue = objUnderTest.Add("42,1001,3");
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
+TEST(when_passed_multicharacter_delimiter, Uses_that_delimiter_to_sum_values) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 13;
+
+  //Act
+  int actualValue = objUnderTest.Add("//[***]\n8***2***3");
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
+
+
 
