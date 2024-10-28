@@ -25,4 +25,16 @@ TEST(when_passed_a_single_number, Returns_0_for_empty_string) {
   EXPECT_EQ(expectedValue, actualValue);
 }
 
+TEST(when_passed_a_single_number, Returns_1_for_one) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 0;
+
+  //Act
+  int actualValue = objUnderTest.Add(1);
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
 
