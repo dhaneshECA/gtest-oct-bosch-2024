@@ -136,7 +136,6 @@ TEST(when_passed_multiple_multicharacter_delimiters, Sums_on_each_delimiter) {
 TEST(when_passed_negative_numbers, Throws_an_exception_listing_invalid_values) {
   // Arrange
   StringCalculator objUnderTest;
-  int expectedValue = 14;
   
   //Assert
   EXPECT_THROW(objUnderTest.Add("1,-2,-4,5"), std::invalid_argument);
