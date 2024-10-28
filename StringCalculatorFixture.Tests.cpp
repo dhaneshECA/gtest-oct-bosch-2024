@@ -1,7 +1,7 @@
 #include "StringCalculator.h"
 #include <gtest/gtest.h>
 
-class StringCalculatorAddFixture:pblic testing::Test {
+class StringCalculatorAddFixture:public testing::Test {
   protected:
     StringCalculator *objUnderTest;
     void SetUp() override {
