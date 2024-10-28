@@ -90,6 +90,6 @@ TEST_F(StringCalculatorAddFixture, Sums_on_each_delimiter_when_passed_multiple_m
 }
 
 TEST_F(StringCalculatorAddFixture, Throws_an_exception_listing_invalid_values_when_passed_negative_numbers) {
-  EXPECT_THROW(objUnderTest.Add("1,-2,-4,5"), std::invalid_argument);
+  EXPECT_THROW(objUnderTest->Add("1,-2,-4,5"), std::invalid_argument);
 }
 
