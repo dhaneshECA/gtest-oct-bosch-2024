@@ -28,7 +28,7 @@ TEST(when_passed_a_single_number, Returns_0_for_empty_string) {
 TEST(when_passed_a_single_number, Returns_1_for_one) {
   // Arrange
   StringCalculator objUnderTest;
-  int expectedValue = 0;
+  int expectedValue = 1;
 
   //Act
   int actualValue = objUnderTest.Add("1");
