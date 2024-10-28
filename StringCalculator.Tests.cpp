@@ -31,7 +31,19 @@ TEST(when_passed_a_single_number, Returns_1_for_one) {
   int expectedValue = 0;
 
   //Act
-  int actualValue = objUnderTest.Add(1);
+  int actualValue = objUnderTest.Add("1");
+  
+  //Assert
+  EXPECT_EQ(expectedValue, actualValue);
+}
+
+TEST(when_passed_a_single_number, Returns_1_for_one) {
+  // Arrange
+  StringCalculator objUnderTest;
+  int expectedValue = 3;
+
+  //Act
+  int actualValue = objUnderTest.Add("1,2");
   
   //Assert
   EXPECT_EQ(expectedValue, actualValue);
