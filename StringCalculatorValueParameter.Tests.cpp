@@ -20,7 +20,8 @@ class StringCalculatorAddValueParamFixture: public StringCalculatorAddFixture, p
 };
 
 INSTANTIATE_TEST_SUITE_P(ValidValuesDataSet,StringCalculatorAddValueParamFixture,testing::Values(
-make_tuple("",0), make_tuple("0",0), make_tuple("1",1), make_tuple("1,2,3",6)
+make_tuple("",0), make_tuple("0",0), make_tuple("1",1), make_tuple("1,2,3",6),
+make_tuple("//;\n1;2", 3), make_tuple("//[***]\n8***2***3", 3), make_tuple("//[*][%]\n4*2%3",9), make_tuple("42,1001,3",45)
 ));
 
 TEST_P(StringCalculatorAddValueParamFixture, DataDrivenTest) {
