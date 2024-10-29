@@ -1,6 +1,7 @@
 #include "StringCalculator.h"
 #include <gtest/gtest.h>
 
+//Fixture class
 class StringCalculatorAddFixture:public testing::Test {
   protected:
     StringCalculator *objUnderTest;
