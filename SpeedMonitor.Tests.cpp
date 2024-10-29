@@ -6,9 +6,11 @@ class SpeedMonitorFixture : public testing::Test {
   protected:
     SpeedMonitor* objUnderTest;
     IMessageCommunicator* messageCommunicator;
+    ISpeedSensor* speedSensor;
   void SetUp() override {
     objUnderTest = new StringCalculator();
     messageCommunicator = new IOTCloudCommunicator();
+    speedSensor = new BNFSpeedSensor();
   }
 
 };
